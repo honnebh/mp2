@@ -1,0 +1,207 @@
+.intro {
+  margin-bottom: 20px;
+}
+
+.intro p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.search {
+  flex: 1 1 280px;
+}
+
+.search input,
+.field select {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+
+.search input:focus,
+.field select:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 0 1 200px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.field select {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-h);
+}
+
+.order {
+  display: flex;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.order button {
+  padding: 0 14px;
+  border: none;
+  background: var(--surface-2);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.order button + button {
+  border-left: 1px solid var(--border);
+}
+
+.order .orderActive {
+  background: var(--accent);
+  color: #fff;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.count {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.empty {
+  padding: 48px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 20px 8px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s;
+}
+
+.row:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+
+.row img {
+  flex-shrink: 0;
+  image-rendering: pixelated;
+  background: var(--surface-2);
+  border-radius: 10px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.id {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.types {
+  display: flex;
+  gap: 6px;
+}
+
+.facts {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+}
+
+.facts div {
+  min-width: 64px;
+  text-align: right;
+}
+
+.facts dt {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.facts dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+@media (max-width: 640px) {
+  .facts {
+    display: none;
+  }
+
+  .order {
+    flex: 1 1 100%;
+  }
+
+  .order button {
+    flex: 1;
+  }
+
+  .field {
+    flex: 1 1 100%;
+  }
+}
